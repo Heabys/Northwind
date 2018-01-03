@@ -25,6 +25,8 @@ Partial Class frmPrincipal
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrarShipperToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegistrarCategoriaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegistrarProveedorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -39,7 +41,7 @@ Partial Class frmPrincipal
         '
         'ArchivoToolStripMenuItem
         '
-        Me.ArchivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrarShipperToolStripMenuItem})
+        Me.ArchivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrarShipperToolStripMenuItem, Me.RegistrarCategoriaToolStripMenuItem, Me.RegistrarProveedorToolStripMenuItem})
         Me.ArchivoToolStripMenuItem.Name = "ArchivoToolStripMenuItem"
         Me.ArchivoToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
         Me.ArchivoToolStripMenuItem.Text = "Archivo"
@@ -47,8 +49,20 @@ Partial Class frmPrincipal
         'RegistrarShipperToolStripMenuItem
         '
         Me.RegistrarShipperToolStripMenuItem.Name = "RegistrarShipperToolStripMenuItem"
-        Me.RegistrarShipperToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.RegistrarShipperToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
         Me.RegistrarShipperToolStripMenuItem.Text = "Registrar Shipper"
+        '
+        'RegistrarCategoriaToolStripMenuItem
+        '
+        Me.RegistrarCategoriaToolStripMenuItem.Name = "RegistrarCategoriaToolStripMenuItem"
+        Me.RegistrarCategoriaToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.RegistrarCategoriaToolStripMenuItem.Text = "Registrar Categoria"
+        '
+        'RegistrarProveedorToolStripMenuItem
+        '
+        Me.RegistrarProveedorToolStripMenuItem.Name = "RegistrarProveedorToolStripMenuItem"
+        Me.RegistrarProveedorToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.RegistrarProveedorToolStripMenuItem.Text = "Registrar Proveedor"
         '
         'frmPrincipal
         '
@@ -71,4 +85,6 @@ Partial Class frmPrincipal
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents ArchivoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RegistrarShipperToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RegistrarCategoriaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RegistrarProveedorToolStripMenuItem As ToolStripMenuItem
 End Class

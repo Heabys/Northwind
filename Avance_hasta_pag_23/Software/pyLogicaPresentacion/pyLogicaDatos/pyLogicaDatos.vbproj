@@ -64,7 +64,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.vb" />
+    <Compile Include="dCategory.vb" />
     <Compile Include="dShipper.vb" />
+    <Compile Include="dSupplier.vb" />
     <Compile Include="ModuloGeneral.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
