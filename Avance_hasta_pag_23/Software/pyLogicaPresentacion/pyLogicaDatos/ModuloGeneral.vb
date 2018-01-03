@@ -1,5 +1,4 @@
 ﻿Module ModuloGeneral
-
     Public Function CadenaConexionDB() As String
         Dim rtn As String
 
@@ -8,4 +7,3 @@
         Return rtn
     End Function
 End Module
-

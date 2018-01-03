@@ -79,6 +79,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="nShipper.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -98,6 +99,16 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\pyLogicaEntidad.vbproj">
+      <Project>{906fe268-5430-4d14-bfe0-0f5f13eed8ac}</Project>
+      <Name>pyLogicaEntidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\pyLogicaDatos\pyLogicaDatos.vbproj">
+      <Project>{af8f26ff-24a9-43ec-bf37-0dab4bb43f7a}</Project>
+      <Name>pyLogicaDatos</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
