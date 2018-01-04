@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Class1.vb" />
     <Compile Include="eCategory.vb" />
+    <Compile Include="eProduct.vb" />
     <Compile Include="eShipper.vb" />
     <Compile Include="eSupplier.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

@@ -91,6 +91,12 @@
     <Compile Include="frmRegistrarCategory.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmRegistrarProduct.Designer.vb">
+      <DependentUpon>frmRegistrarProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrarProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmRegistrarShipper.Designer.vb">
       <DependentUpon>frmRegistrarShipper.vb</DependentUpon>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistrarCategory.resx">
       <DependentUpon>frmRegistrarCategory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarProduct.resx">
+      <DependentUpon>frmRegistrarProduct.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistrarShipper.resx">
       <DependentUpon>frmRegistrarShipper.vb</DependentUpon>
