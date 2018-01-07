@@ -1,5 +1,5 @@
 ﻿Imports Microsoft.VisualBasic
-Imports pyLogicaEntidad
+Imports ClassLibrary1
 Imports System.Data.SqlClient
 Imports System.Data.SqlTypes
 Public Class dEmployee
@@ -20,7 +20,7 @@ Public Class dEmployee
         rtn = New List(Of eRep_ReporteEmpleados)
         While (Reg.Read())
             x = New eRep_ReporteEmpleados()
-            x.EmployeelD = Reg.GetInt32(0)
+            x.EmployeeID = Reg.GetInt32(0)
             x.Nombres = Reg.GetString(1)
             x.Title = Reg.GetString(2)
             x.Antiguedad = Reg.GetInt32(3)

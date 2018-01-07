@@ -1,5 +1,5 @@
 ﻿Imports Microsoft.VisualBasic
-Imports pyLogicaEntidad
+Imports ClassLibrary1
 Imports pyLogicaDatos
 Public Class nEmployee
     Public Function Elaborar_ReporteEmpleados() As List(Of eRep_ReporteEmpleados)

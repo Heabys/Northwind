@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Class1.vb" />
     <Compile Include="dCategory.vb" />
+    <Compile Include="dEmployee.vb" />
     <Compile Include="dProduct.vb" />
     <Compile Include="dVentas.vb" />
     <Compile Include="dShipper.vb" />
