@@ -1,4 +1,5 @@
-﻿Imports pyLogicaEntidad
+﻿Imports ClassLibrary1
+Imports pyLogicaDatos
 
 Public Class nShipper
     Public Sub Guardar(ByRef x As eShipper)

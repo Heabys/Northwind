@@ -1,7 +1,7 @@
 ﻿Imports System
 Imports System.Data.SqlTypes
 Imports System.Data.SqlClient
-Imports pyLogicaEntidad
+Imports ClassLibrary1.eCategory
 
 Public Class dCategory
     Public Sub Eliminar(ByRef x As eCategory)
@@ -17,7 +17,7 @@ Public Class dCategory
         CMD.CommandText = "Categories_Eliminar"
 
         oParameter = CMD.Parameters.Add("(@xCategorylD", SqlDbType.Int)
-        oParameter.Value = x.CategorylD
+        oParameter.Value = x.CategoryID
         CMD.ExecuteNonQuery()
 
         CN.Close()
@@ -46,7 +46,7 @@ Public Class dCategory
         oParameter = CMD.Parameters.Add("@xPicture", SqlDbType.Image)
         oParameter.Value = x.Picture
         CMD.ExecuteNonQuery()
-        x.CategorylD = CMD.Parameters(0).Value
+        x.CategoryID = CMD.Parameters(0).Value
         CN.Close()
         CN.Dispose()
         CMD.Dispose()
@@ -65,7 +65,7 @@ Public Class dCategory
         CMD.CommandText = "Categories_Actualizar”
 
         oParameter = CMD.Parameters.Add("@xCategoryID", SqlDbType.Int)
-        oParameter.Value = x.CategorylD
+        oParameter.Value = x.CategoryID
 
         oParameter = CMD.Parameters.Add("@xCategoryName", SqlDbType.NVarChar, 15)
         oParameter.Value = x.CategoryName
@@ -82,14 +82,15 @@ Public Class dCategory
         CMD.Dispose()
     End Sub
 
-    Public Function ListarQ() As List(Of eCategory)
+    Public Function Listar() As List(Of eCategory)
 
         Dim CN As SqlConnection
         Dim CMD As SqlCommand
         Dim rtn As List(Of eCategory)
-        Dim Reg As SqlDataReader Dim x As eCategory
+        Dim Reg As SqlDataReader
+        Dim x As eCategory
 
-		CN = New SqlClient.SqlConnection(CadenaConexionDB())
+        CN = New SqlClient.SqlConnection(CadenaConexionDB())
         CN.Open()
         CMD = New SqlCommand
         CMD.CommandType = CommandType.Text
@@ -99,7 +100,7 @@ Public Class dCategory
         rtn = New List(Of eCategory)
         While (Reg.Read())
             x = New eCategory()
-            x.CategorylD = Reg.GetInt32(0)
+            x.CategoryID = Reg.GetInt32(0)
             x.CategoryName = Reg.GetString(1)
             rtn.Add(x)
         End While
@@ -139,8 +140,8 @@ Public Class dCategory
         oParameter.Direction = ParameterDirection.Output
 
         CMD.ExecuteNonQuery()
-        x.CategorylD = IIf(IsDBNull(CMD.Parameters("@xCategorylD").Value), -1, CMD.Parameters("@xCategoryID").Value)
-        x.Description = IIf(IsDBNull(CMD.Parameters("@xDescription").Value), CMD.Parameters("@xDescription").Value)
+        x.CategoryID = IIf(IsDBNull(CMD.Parameters("@xCategorylD").Value), -1, CMD.Parameters("@xCategoryID").Value)
+        x.Description = IIf(IsDBNull(CMD.Parameters("@xDescription").Value), -1, CMD.Parameters("@xDescription").Value)
         If Not IsDBNull(CMD.Parameters("@xPicture").Value) Then
             x.Picture = CMD.Parameters("@xPicture").Value
         End If

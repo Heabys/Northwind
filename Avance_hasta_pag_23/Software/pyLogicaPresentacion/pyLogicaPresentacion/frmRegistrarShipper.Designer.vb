@@ -49,7 +49,7 @@ Partial Class frmRegistrarShipper
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(66, 62)
+        Me.Label1.Location = New System.Drawing.Point(66, 26)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(60, 13)
         Me.Label1.TabIndex = 0
@@ -58,7 +58,7 @@ Partial Class frmRegistrarShipper
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(66, 114)
+        Me.Label2.Location = New System.Drawing.Point(66, 78)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(82, 13)
         Me.Label2.TabIndex = 1
@@ -67,7 +67,7 @@ Partial Class frmRegistrarShipper
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(66, 169)
+        Me.Label3.Location = New System.Drawing.Point(66, 133)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(38, 13)
         Me.Label3.TabIndex = 2
@@ -75,7 +75,7 @@ Partial Class frmRegistrarShipper
         '
         'cb_Nuevo
         '
-        Me.cb_Nuevo.Location = New System.Drawing.Point(67, 230)
+        Me.cb_Nuevo.Location = New System.Drawing.Point(67, 194)
         Me.cb_Nuevo.Name = "cb_Nuevo"
         Me.cb_Nuevo.Size = New System.Drawing.Size(75, 23)
         Me.cb_Nuevo.TabIndex = 3
@@ -84,7 +84,7 @@ Partial Class frmRegistrarShipper
         '
         'cb_Buscar
         '
-        Me.cb_Buscar.Location = New System.Drawing.Point(186, 230)
+        Me.cb_Buscar.Location = New System.Drawing.Point(186, 194)
         Me.cb_Buscar.Name = "cb_Buscar"
         Me.cb_Buscar.Size = New System.Drawing.Size(75, 23)
         Me.cb_Buscar.TabIndex = 4
@@ -93,7 +93,7 @@ Partial Class frmRegistrarShipper
         '
         'cb_Guardar
         '
-        Me.cb_Guardar.Location = New System.Drawing.Point(311, 230)
+        Me.cb_Guardar.Location = New System.Drawing.Point(311, 194)
         Me.cb_Guardar.Name = "cb_Guardar"
         Me.cb_Guardar.Size = New System.Drawing.Size(75, 23)
         Me.cb_Guardar.TabIndex = 5
@@ -102,7 +102,7 @@ Partial Class frmRegistrarShipper
         '
         'cb_Eliminar
         '
-        Me.cb_Eliminar.Location = New System.Drawing.Point(435, 230)
+        Me.cb_Eliminar.Location = New System.Drawing.Point(435, 194)
         Me.cb_Eliminar.Name = "cb_Eliminar"
         Me.cb_Eliminar.Size = New System.Drawing.Size(75, 23)
         Me.cb_Eliminar.TabIndex = 6
@@ -112,21 +112,21 @@ Partial Class frmRegistrarShipper
         'txt_ShipperID
         '
         Me.txt_ShipperID.Enabled = False
-        Me.txt_ShipperID.Location = New System.Drawing.Point(162, 62)
+        Me.txt_ShipperID.Location = New System.Drawing.Point(162, 26)
         Me.txt_ShipperID.Name = "txt_ShipperID"
         Me.txt_ShipperID.Size = New System.Drawing.Size(100, 20)
         Me.txt_ShipperID.TabIndex = 7
         '
         'txt_CompanyName
         '
-        Me.txt_CompanyName.Location = New System.Drawing.Point(162, 111)
+        Me.txt_CompanyName.Location = New System.Drawing.Point(162, 75)
         Me.txt_CompanyName.Name = "txt_CompanyName"
         Me.txt_CompanyName.Size = New System.Drawing.Size(348, 20)
         Me.txt_CompanyName.TabIndex = 8
         '
         'txt_Phone
         '
-        Me.txt_Phone.Location = New System.Drawing.Point(162, 166)
+        Me.txt_Phone.Location = New System.Drawing.Point(162, 130)
         Me.txt_Phone.Name = "txt_Phone"
         Me.txt_Phone.Size = New System.Drawing.Size(100, 20)
         Me.txt_Phone.TabIndex = 9
@@ -135,7 +135,7 @@ Partial Class frmRegistrarShipper
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(604, 320)
+        Me.ClientSize = New System.Drawing.Size(546, 251)
         Me.Controls.Add(Me.txt_Phone)
         Me.Controls.Add(Me.txt_CompanyName)
         Me.Controls.Add(Me.txt_ShipperID)
@@ -147,7 +147,7 @@ Partial Class frmRegistrarShipper
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmRegistrarShipper"
-        Me.Text = "frmRegistrarShipper"
+        Me.Text = "Registrar Shipper"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "pyLogicaPresentacion", "pyLogicaPresentacion\pyLogicaPresentacion.vbproj", "{AD9C3F19-951F-4EBD-8521-CBAA279581DE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AF8F26FF-24A9-43EC-BF37-0DAB4BB43F7A} = {AF8F26FF-24A9-43EC-BF37-0DAB4BB43F7A}
+	EndProjectSection
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "pyLogicaNegocio", "pyLogicaNegocio\pyLogicaNegocio.vbproj", "{BA3CC07C-8E75-4911-9CAA-E78E166B5437}"
 EndProject

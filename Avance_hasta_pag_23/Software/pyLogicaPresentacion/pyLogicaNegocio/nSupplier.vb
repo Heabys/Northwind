@@ -1,12 +1,12 @@
 ﻿Imports System
 Imports pyLogicaDatos
-Imports pyLogicaEntidad
+Imports ClassLibrary1
 Public Class nSupplier
     Public Sub Guardar(ByRef x As eSupplier)
         Dim d As dSupplier
-        d = New dSupplierQ
+        d = New dSupplier()
 
-        If x.SupplierlD <= 0 Then
+        If x.SupplierID <= 0 Then
             d.Insertar(x)
         Else
             d.Actualizar(x)
@@ -16,7 +16,7 @@ Public Class nSupplier
 
     Public Sub Eliminar(ByRef x As eSupplier)
         Dim d As dSupplier
-        d = New dSupplie()
+        d = New dSupplier()
         If x.SupplierID > 0 Then
             d.Eliminar(x)
         End If

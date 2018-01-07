@@ -3,7 +3,7 @@ Imports System.Drawing
 Public Class eCategory
     Public Class eCategory
 
-        Public Property CategorylD As Integer
+        Public Property CategoryID As Integer
 
         Public Property CategoryName As String
 
@@ -12,7 +12,7 @@ Public Class eCategory
         Public Property Picture As Byte()
 
 
-        Public Property PictureDPG As Image
+        Public Property PictureJPG As Image
             Set(value As Image)
                 Dim ms As New MemoryStream()
                 value.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg)

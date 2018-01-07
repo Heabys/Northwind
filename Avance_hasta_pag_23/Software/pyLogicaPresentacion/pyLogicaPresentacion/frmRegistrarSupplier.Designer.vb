@@ -314,7 +314,7 @@ Partial Class frmRegistrarSupplier
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txt_SupplierID)
         Me.Name = "frmRegistrarSupplier"
-        Me.Text = "frmRegistrarSupplier"
+        Me.Text = "Registrar Proveedor"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

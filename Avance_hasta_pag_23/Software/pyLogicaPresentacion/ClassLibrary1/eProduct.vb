@@ -3,9 +3,9 @@
 
     Public Property ProductName As String
 
-    Public Property SupplierlD As Integer
+    Public Property SupplierID As Integer
 
-    Public Property CategorylD As Integer
+    Public Property CategoryID As Integer
 
     Public Property QuantityPerUnit As String
 

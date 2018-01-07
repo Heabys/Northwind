@@ -1,7 +1,6 @@
 ﻿Imports System
 Imports pyLogicaNegocio
-Imports pyLogicaEntidad
-
+Imports ClassLibrary1
 Public Class frmRegistrarShipper
     Private Sub cb_Nuevo_Click(sender As Object, e As EventArgs) Handles cb_Nuevo.Click
         txt_ShipperID.Clear()
@@ -11,7 +10,7 @@ Public Class frmRegistrarShipper
 
     Private Sub cb_Guardar_Click(sender As Object, e As EventArgs) Handles cb_Guardar.Click
         Dim x As eShipper
-        Dim x As nShipper
+        Dim d As nShipper
         Try
             x = New eShipper
             d = New nShipper
@@ -35,7 +34,7 @@ Public Class frmRegistrarShipper
 
     Private Sub cb_Eliminar_Click(sender As Object, e As EventArgs)
         Dim x As eShipper
-        Dim x As nShipper
+        Dim d As nShipper
 
         Try
             x = New eShipper

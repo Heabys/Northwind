@@ -1,6 +1,6 @@
 ﻿Imports System
 Imports System.Data.SqlClient
-Imports pyLogicaEntidad
+Imports ClassLibrary1
 Public Class dSupplier
     Public Sub Insertar(ByRef x As eSupplier)
         Dim CN As SqlConnection
@@ -24,21 +24,22 @@ Public Class dSupplier
         CMD.Parameters.Add("@xFax", SqlDbType.NVarChar, 24).Value = x.Fax
         CMD.Parameters.Add("@xHomePage", SqlDbType.NText).Value = x.HomePage
         CMD.ExecuteNonQuery()
-        x.SupplierlD = CMD.Parameters(0).Value
+        x.SupplierID = CMD.Parameters(0).Value
         CN.Close()
         CN.Dispose()
         CMD.Dispose()
     End Sub
 
     Public Sub Eliminar(ByRef x As eSupplier)
-        Dim CN As SqlConnection Dim CMD As SqlCommand
-		CN = New SqlClient.SqlConnection(CadenaConexionDB())
+        Dim CN As SqlConnection
+        Dim CMD As SqlCommand
+        CN = New SqlClient.SqlConnection(CadenaConexionDB())
         CN.Open()
         CMD = New SqlCommand
         CMD.CommandType = CommandType.StoredProcedure
         CMD.Connection = CN
         CMD.CommandText = "Suppliers_Eliminar"
-        CMD.Parameters.Add("@xSupplierID", SqlDbType.Int).Value = x.SupplierlD
+        CMD.Parameters.Add("@xSupplierID", SqlDbType.Int).Value = x.SupplierID
         CMD.ExecuteNonQuery()
         CN.Close()
         CN.Dispose()
@@ -58,7 +59,7 @@ Public Class dSupplier
         CMD.Connection = CN
 
         CMD.CommandText = "Suppliers_Actualizar”
-        CMD.Parameters.Add("@xSupplierlD", SqlDbType.Int).Value = x.SupplierlD
+        CMD.Parameters.Add("@xSupplierlD", SqlDbType.Int).Value = x.SupplierID
         CMD.Parameters.Add("@xCompanyName", SqlDbType.NVarChar, 40).Value = x.CompanyName
         CMD.Parameters.Add("@xContactName", SqlDbType.NVarChar, 30).Value = x.ContactName
         CMD.Parameters.Add("@xContactTitle", SqlDbType.NVarChar, 30).Value = x.ContactTitle
@@ -72,7 +73,7 @@ Public Class dSupplier
         CMD.Parameters.Add("@xHomePage", SqlDbType.NText).Value = x.HomePage
         CMD.ExecuteNonQuery()
         CN.Close()
-        CN.DisposeQ
+        CN.Dispose()
         CMD.Dispose()
 
     End Sub
@@ -84,7 +85,7 @@ Public Class dSupplier
         Dim Reg As SqlDataReader
         Dim x As eSupplier
         CN = New SqlClient.SqlConnection(CadenaConexionDB())
-        CN.OpenQ
+        CN.Open()
         CMD = New SqlCommand
         CMD.CommandType = CommandType.Text
         CMD.CommandText = "Select CategoryID, CategoryName from Categories Order By 2"
@@ -92,7 +93,7 @@ Public Class dSupplier
         rtn = New List(Of eSupplier)
         While (Reg.Read())
             x = New eSupplier()
-            x.SupplierlD = Reg.GetInt32(0)
+            x.SupplierID = Reg.GetInt32(0)
             x.CompanyName = Reg.GetString(1)
             x.ContactName = Reg.GetString(2)
             x.ContactTitle = Reg.GetString(3)
@@ -113,8 +114,9 @@ Public Class dSupplier
     End Function
 
     Public Sub Buscar(ByRef x As eSupplier)
-        Dim CN As SqlConnection Dim CMD As SqlCommand
-		CN = New SqlClient.SqlConnection(CadenaConexionDB())
+        Dim CN As SqlConnection
+        Dim CMD As SqlCommand
+        CN = New SqlClient.SqlConnection(CadenaConexionDB())
         CN.Open()
         CMD = New SqlCommand
         CMD.CommandType = CommandType.StoredProcedure
@@ -133,16 +135,16 @@ Public Class dSupplier
         CMD.Parameters.Add("@xFax", SqlDbType.NVarChar, 24).Direction = ParameterDirection.Output
         CMD.Parameters.Add("@xHomePage", SqlDbType.NText).Direction = ParameterDirection.Output
         CMD.ExecuteNonQuery()
-        x.CompanyName = IIf(IsDBNull(CMD.Parameter s ("(SlxCompanyName ").Value),	CMD.Parameters("@xCompanyName").Value
-		x.ContactName = IIf(IsDBNull(CMD.ParametersC'^xContactName").Value),	CMD.Parameters("@xContactName").Value)
-        x.ContactTitle = IIf(IsDBNull(CMD.Parameters("@xContactTitle").Value), CMD.Parameters("@xContactTitle").Value)
-        x.Address = IIf(IsDBNull(CMD.Parameters("@xAddress").Value), CMD.Parameters("@xAddress").Value)
-        x.City = Ilf(IsDBNull(CMD.Parameters("@xCity").Value), CMD.Parameters("@xCity").Value)
-        x.Region = IIf(IsDBNull(CMD.Parameters("@xRegion").Value), CMD.Parameters("@xRegion").Value)
-        x.PostalCode = IIf(IsDBNull(CMD.Parameters("@xPostalCode").Value), CMD.Parameters("@xPostalCode").Value)
-        x.Country = IIf(IsDBNull(CMD.Parameters("@xCountry").Value), CMD.Parameters("@xCountry").Value)
-        x.Fax = IIf(IsDBNull(CMD.Parameters("@xFax").Value), CMD.Parameters("@xFax").Value)
-        x.HomePage = IIf(IsDBNull(CMD.Parameters("@xHomePage").Value), CMD.Parameters("@xHomePage").Value)
+        x.CompanyName = IIf(IsDBNull(CMD.Parameters("@xCompanyName").Value), "", CMD.Parameters("@xCompanyName").Value)
+        x.ContactName = IIf(IsDBNull(CMD.Parameters("@xContactName").Value), "", CMD.Parameters("@xContactName").Value)
+        x.ContactTitle = IIf(IsDBNull(CMD.Parameters("@xContactTitle").Value), "", CMD.Parameters("@xContactTitle").Value)
+        x.Address = IIf(IsDBNull(CMD.Parameters("@xAddress").Value), "", CMD.Parameters("@xAddress").Value)
+        x.City = IIf(IsDBNull(CMD.Parameters("@xCity").Value), "", CMD.Parameters("@xCity").Value)
+        x.Region = IIf(IsDBNull(CMD.Parameters("@xRegion").Value), "", CMD.Parameters("@xRegion").Value)
+        x.PostalCode = IIf(IsDBNull(CMD.Parameters("@xPostalCode").Value), "", CMD.Parameters("@xPostalCode").Value)
+        x.Country = IIf(IsDBNull(CMD.Parameters("@xCountry").Value), "", CMD.Parameters("@xCountry").Value)
+        x.Fax = IIf(IsDBNull(CMD.Parameters("@xFax").Value), "", CMD.Parameters("@xFax").Value)
+        x.HomePage = IIf(IsDBNull(CMD.Parameters("@xHomePage").Value), "", CMD.Parameters("@xHomePage").Value)
         CN.Close()
         CN.Dispose()
         CMD.Dispose()

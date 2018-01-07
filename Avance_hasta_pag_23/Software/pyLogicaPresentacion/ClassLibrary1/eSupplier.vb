@@ -1,6 +1,6 @@
 ﻿Public Class eSupplier
 
-    Public Property SupplierlD As Integer
+    Public Property SupplierID As Integer
 
     Public Property CompanyName As String
 

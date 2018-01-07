@@ -1,4 +1,4 @@
-﻿Imports pyLogicaEntidad
+﻿Imports ClassLibrary1
 Imports pyLogicaDatos
 Public Class nProduct
     Public Sub Guardar(ByRef x As eProduct)

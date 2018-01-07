@@ -22,22 +22,22 @@ Partial Class frmPrincipal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
         Me.ArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrarShipperToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrarCategoriaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrarProveedorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuStrip1.SuspendLayout()
+        Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
-        'MenuStrip1
+        'MenuStrip2
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchivoToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(284, 24)
-        Me.MenuStrip1.TabIndex = 1
-        Me.MenuStrip1.Text = "MenuStrip1"
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchivoToolStripMenuItem})
+        Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip2.Name = "MenuStrip2"
+        Me.MenuStrip2.Size = New System.Drawing.Size(284, 24)
+        Me.MenuStrip2.TabIndex = 3
+        Me.MenuStrip2.Text = "MenuStrip2"
         '
         'ArchivoToolStripMenuItem
         '
@@ -50,7 +50,7 @@ Partial Class frmPrincipal
         '
         Me.RegistrarShipperToolStripMenuItem.Name = "RegistrarShipperToolStripMenuItem"
         Me.RegistrarShipperToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
-        Me.RegistrarShipperToolStripMenuItem.Text = "Registrar Shipper"
+        Me.RegistrarShipperToolStripMenuItem.Text = "Registrar Shipper "
         '
         'RegistrarCategoriaToolStripMenuItem
         '
@@ -69,20 +69,18 @@ Partial Class frmPrincipal
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
-        Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.MenuStrip2)
         Me.IsMdiContainer = True
-        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmPrincipal"
-        Me.Text = "Sistema Northeind"
+        Me.Text = "Sistema Northwind"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
+        Me.MenuStrip2.ResumeLayout(False)
+        Me.MenuStrip2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents MenuStrip2 As MenuStrip
     Friend WithEvents ArchivoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RegistrarShipperToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RegistrarCategoriaToolStripMenuItem As ToolStripMenuItem
