@@ -1,6 +1,6 @@
 ﻿Public Class eShipper
 
-    Public Property ShipperId As Integer
+    Public Property ShipperID As Integer
 
     Public Property CompanyName As String
 

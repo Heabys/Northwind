@@ -1,4 +1,4 @@
-﻿Imports pyLogicaEntidad
+﻿Imports ClassLibrary1
 Imports pyLogicaNegocio
 Public Class frmRegistrarSupplier
     Private Sub cb_Nuevo_Click(sender As Object, e As EventArgs) Handles cb_Nuevo.Click
@@ -34,13 +34,13 @@ Public Class frmRegistrarSupplier
             x.Fax = txt_Fax.Text
             x.HomePage = txt_HomePage.Text
             If txt_SupplierID.Text <> "" Then
-                x.SupplierlD = CInt(txt_SupplierID.Text)
+                x.SupplierID = CInt(txt_SupplierID.Text)
             Else
-                x.SupplierlD = -1
+                x.SupplierID = -1
             End If
             n.Guardar(x)
             MsgBox("Se guardo correctamente", MsgBoxStyle.Information, Me.Text)
-            txt_SupplierID.Text = x.SupplierlD.ToString()
+            txt_SupplierID.Text = x.SupplierID.ToString()
         Catch ex As Exception
             MsgBox("Error: " & ex.Message, MsgBoxStyle.Critical, Me.Text)
         Finally
@@ -56,8 +56,9 @@ Public Class frmRegistrarSupplier
             If txt_CompanyName.Text <> "" Then
                 n = New nSupplier
                 x = New eSupplier
-                x.CompanyName = txt_CompanyName.Text.Trim() n.Buscar(x)
-				If x.SupplierlD >= 1 Then
+                x.CompanyName = txt_CompanyName.Text.Trim()
+                n.Buscar(x)
+                If x.SupplierID >= 1 Then
                     MsgBox("Categoria encontrada", MsgBoxStyle.Information, Me.Text)
                     txt_CompanyName.Text = x.CompanyName.ToString()
                     txt_ContactName.Text = x.ContactName
@@ -89,7 +90,7 @@ Public Class frmRegistrarSupplier
             If txt_SupplierID.Text <> "" Then
                 n = New nSupplier
                 x = New eSupplier
-                x.SupplierlD = CInt(txt_SupplierID.Text)
+                x.SupplierID = CInt(txt_SupplierID.Text)
                 n.Eliminar(x)
             End If
             MsgBox("Se elimino correctamente", MsgBoxStyle.Information, Me.Text)

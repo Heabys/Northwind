@@ -1,4 +1,4 @@
-﻿Imports pyLogicaEntidad
+﻿Imports ClassLibrary1.eCategory
 Imports pyLogicaNegocio
 Imports System.IO
 Public Class frmRegistrarCategory
@@ -9,7 +9,7 @@ Public Class frmRegistrarCategory
         pb_Imagen.ResetText()
     End Sub
 
-    Private Sub cb_CambiarImagen_Click(sender As Object, e As EventArgs) Handles cb_CambiarImagen 
+    Private Sub cb_CambiarImagen_Click(sender As Object, e As EventArgs) Handles cb_CambiarImagen.Click
         Dim file As OpenFileDialog = New OpenFileDialog()
         file.Filter = "Archivo IPG|*.jpg"
         If (file.ShowDialog() = DialogResult.OK) Then
@@ -25,15 +25,15 @@ Public Class frmRegistrarCategory
             x = New eCategory()
             x.CategoryName = txt_CategoryName.Text
             x.Description = txt_Descripcion.Text
-            x.PictureDPG = pb_Imagen.Image
+            x.PictureJPG = pb_Imagen.Image
             If txt_CategoryID.Text <> "" Then
-                x.CategorylD = CInt(txt_CategoryID.Text)
+                x.CategoryID = CInt(txt_CategoryID.Text)
             Else
-                x.CategorylD = -1
+                x.CategoryID = -1
             End If
             n.Guardar(x)
             MsgBox("Se guardo correctamente", MsgBoxStyle.Information, Me.Text)
-            txt_CategoryID.Text = x.CategorylD.ToString()
+            txt_CategoryID.Text = x.CategoryID.ToString()
         Catch ex As Exception
             MsgBox("Error: " & ex.Message, MsgBoxStyle.Critical, Me.Text)
         Finally
@@ -50,7 +50,7 @@ Public Class frmRegistrarCategory
             If txt_CategoryID.Text <> "" Then
                 n = New nCategory
                 x = New eCategory
-                x.CategorylD = CInt(txt_CategoryID.Text)
+                x.CategoryID = CInt(txt_CategoryID.Text)
                 n.Eliminar(x)
             End If
             MsgBox("Se elimino correctamente", MsgBoxStyle.Information, Me.Text)
@@ -71,9 +71,9 @@ Public Class frmRegistrarCategory
                 x = New eCategory
                 x.CategoryName = txt_CategoryName.Text.Trim()
                 n.Buscar(x)
-                If x.CategorylD >= 1 Then
+                If x.CategoryID >= 1 Then
                     MsgBox("Categoria encontrada", MsgBoxStyle.Information, Me.Text)
-                    txt_CategoryID.Text = x.CategorylD.ToString()
+                    txt_CategoryID.Text = x.CategoryID.ToString()
                     txt_Descripcion.Text = x.Description
                     pb_Imagen.Image = x.PictureJPG
                 Else

@@ -93,7 +93,7 @@ Partial Class frmRegistrarCategory
         '
         Me.pb_Imagen.Location = New System.Drawing.Point(148, 231)
         Me.pb_Imagen.Name = "pb_Imagen"
-        Me.pb_Imagen.Size = New System.Drawing.Size(187, 109)
+        Me.pb_Imagen.Size = New System.Drawing.Size(187, 178)
         Me.pb_Imagen.TabIndex = 7
         Me.pb_Imagen.TabStop = False
         '
@@ -108,7 +108,7 @@ Partial Class frmRegistrarCategory
         '
         'cb_Nuevo
         '
-        Me.cb_Nuevo.Location = New System.Drawing.Point(35, 377)
+        Me.cb_Nuevo.Location = New System.Drawing.Point(35, 432)
         Me.cb_Nuevo.Name = "cb_Nuevo"
         Me.cb_Nuevo.Size = New System.Drawing.Size(107, 27)
         Me.cb_Nuevo.TabIndex = 9
@@ -117,7 +117,7 @@ Partial Class frmRegistrarCategory
         '
         'cb_Buscar
         '
-        Me.cb_Buscar.Location = New System.Drawing.Point(261, 377)
+        Me.cb_Buscar.Location = New System.Drawing.Point(261, 432)
         Me.cb_Buscar.Name = "cb_Buscar"
         Me.cb_Buscar.Size = New System.Drawing.Size(107, 27)
         Me.cb_Buscar.TabIndex = 10
@@ -126,7 +126,7 @@ Partial Class frmRegistrarCategory
         '
         'cb_Guardar
         '
-        Me.cb_Guardar.Location = New System.Drawing.Point(148, 377)
+        Me.cb_Guardar.Location = New System.Drawing.Point(148, 432)
         Me.cb_Guardar.Name = "cb_Guardar"
         Me.cb_Guardar.Size = New System.Drawing.Size(107, 27)
         Me.cb_Guardar.TabIndex = 11
@@ -135,7 +135,7 @@ Partial Class frmRegistrarCategory
         '
         'cb_Eliminar
         '
-        Me.cb_Eliminar.Location = New System.Drawing.Point(374, 377)
+        Me.cb_Eliminar.Location = New System.Drawing.Point(374, 432)
         Me.cb_Eliminar.Name = "cb_Eliminar"
         Me.cb_Eliminar.Size = New System.Drawing.Size(107, 27)
         Me.cb_Eliminar.TabIndex = 12
@@ -155,7 +155,7 @@ Partial Class frmRegistrarCategory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(508, 416)
+        Me.ClientSize = New System.Drawing.Size(502, 472)
         Me.Controls.Add(Me.cb_Eliminar)
         Me.Controls.Add(Me.cb_Guardar)
         Me.Controls.Add(Me.cb_Buscar)
@@ -170,7 +170,7 @@ Partial Class frmRegistrarCategory
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txt_CategoryID)
         Me.Name = "frmRegistrarCategory"
-        Me.Text = "frmRegistrarCategory"
+        Me.Text = "Registrar Categoria"
         CType(Me.pb_Imagen, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

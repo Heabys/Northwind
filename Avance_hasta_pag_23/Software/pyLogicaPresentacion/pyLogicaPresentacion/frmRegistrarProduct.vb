@@ -1,4 +1,4 @@
-﻿Imports pyLogicaEntidad
+﻿Imports ClassLibrary1
 Imports pyLogicaNegocio
 Public Class frmRegistrarProduct
     Private Sub CargarCategorias()
@@ -23,8 +23,8 @@ Public Class frmRegistrarProduct
         Me.cbo_CategoryID.SelectedIndex = -1
         Me.txt_QuantityxUnit.Clear()
         Me.txt_UnitPrice.Clear()
-        Me.txt_UnitslnStock.Clear()
-        Me.txt JJnitsOnOrder.Clear()
+        Me.txt_UnitsInStock.Clear()
+        Me.txt_UnitsOnOrder.Clear()
         Me.txt_ReorderLevel.Clear()
         Me.check_Discontinued.Checked = False
     End Sub
@@ -36,12 +36,12 @@ Public Class frmRegistrarProduct
             n = New nProduct()
             x = New eProduct()
             x.ProductName = txt_ProductName.Text
-            x.SupplierlD = cbo_SupplierID.SelectedValue
-            x.CategorylD = cbo_CategoryID.SelectedValue
+            x.SupplierID = cbo_SupplierID.SelectedValue
+            x.CategoryID = cbo_CategoryID.SelectedValue
             x.QuantityPerUnit = txt_QuantityxUnit.Text
             x.UnitPrice = CDbl(txt_UnitPrice.Text)
             x.UnitsInStock = CInt(txt_UnitsInStock.Text)
-            x.UnitsOnOrder = txtUnitsOnOrder.Text
+            x.UnitsOnOrder = txt_UnitsOnOrder.Text
             x.ReorderLevel = check_Discontinued.Checked
             If txt_ProductID.Text <> "" Then
                 x.ProductID = CInt(txt_ProductID.Text)
@@ -64,13 +64,15 @@ Public Class frmRegistrarProduct
         Dim x As eProduct
         Try
             If txt_ProductName.Text <> "" Then
-                n = New nProduct x = New eProduct
-				x.ProductName = txt_ProductName.Text.Trim() n.Buscar(x)
-				If x.SupplierlD >= 1 Then
+                n = New nProduct
+                x = New eProduct
+                x.ProductName = txt_ProductName.Text.Trim()
+                n.Buscar(x)
+                If x.SupplierID >= 1 Then
                     MsgBox("Categoria encontrada", MsgBoxStyle.Information, Me.Text)
                     txt_ProductName.Text = x.ProductName.ToString()
-                    cbo_SupplierID.SelectedValue = x.SupplierlD
-                    cbo_CategoryID.SelectedValue = x.CategorylD
+                    cbo_SupplierID.SelectedValue = x.SupplierID
+                    cbo_CategoryID.SelectedValue = x.CategoryID
                     txt_QuantityxUnit.Text = x.QuantityPerUnit
                     txt_UnitPrice.Text = x.UnitPrice
                     txt_UnitsInStock.Text = x.UnitsInStock
@@ -96,7 +98,7 @@ Public Class frmRegistrarProduct
             If txt_ProductID.Text <> "" Then
                 n = New nProduct
                 x = New eProduct
-                x.CategorylD = CInt(txt_ProductID.Text)
+                x.CategoryID = CInt(txt_ProductID.Text)
                 n.Eliminar(x)
             End If
             MsgBox("Se elimino correctamente", MsgBoxStyle.Information, Me.Text)

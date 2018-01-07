@@ -1,13 +1,13 @@
 ﻿Imports System
 Imports pyLogicaDatos
-Imports pyLogicaEntidad
+Imports ClassLibrary1.eCategory
 
 Public Class nCategory
     Public Sub Guardar(ByRef x As eCategory)
         Dim d As dCategory
 
         d = New dCategory
-        If x.CategorylD <= 0 Then
+        If x.CategoryID <= 0 Then
             d.Insertar(x)
         Else
             d.Actualizar(x)
@@ -18,7 +18,7 @@ Public Class nCategory
     Public Sub Eliminar(ByRef x As eCategory)
         Dim d As dCategory
         d = New dCategory
-        If x.CategorylD > 0 Then
+        If x.CategoryID > 0 Then
             d.Eliminar(x)
         End If
         d = Nothing

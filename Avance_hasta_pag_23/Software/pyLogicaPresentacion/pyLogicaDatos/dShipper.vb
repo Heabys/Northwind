@@ -1,7 +1,7 @@
 ﻿Imports System
 Imports System.Data.SqlTypes
 Imports System.Data.SqlClient
-Imports pyLogicaEntidad
+Imports ClassLibrary1
 
 Public Class dShipper
     Public Sub Insertar(ByRef x As eShipper)

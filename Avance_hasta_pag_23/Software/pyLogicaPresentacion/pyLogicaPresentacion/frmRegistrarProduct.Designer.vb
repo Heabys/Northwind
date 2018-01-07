@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmRegistrarProduct
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,12 +20,12 @@ Partial Class frmRegistrarProduct
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.txt_ProductID = New System.Windows.Forms.TextBox()
         Me.txt_ProductName = New System.Windows.Forms.TextBox()
         Me.cbo_SupplierID = New System.Windows.Forms.ComboBox()
-        Me.cbo_ProductID = New System.Windows.Forms.ComboBox()
+        Me.cbo_CategoryID = New System.Windows.Forms.ComboBox()
         Me.txt_QuantityxUnit = New System.Windows.Forms.TextBox()
         Me.txt_UnitPrice = New System.Windows.Forms.TextBox()
         Me.txt_UnitsInStock = New System.Windows.Forms.TextBox()
@@ -45,70 +45,72 @@ Partial Class frmRegistrarProduct
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'txt_ProductID
         '
-        Me.txt_ProductID.Location = New System.Drawing.Point(130, 43)
+        Me.txt_ProductID.Enabled = False
+        Me.txt_ProductID.Location = New System.Drawing.Point(129, 15)
         Me.txt_ProductID.Name = "txt_ProductID"
         Me.txt_ProductID.Size = New System.Drawing.Size(100, 20)
         Me.txt_ProductID.TabIndex = 0
         '
         'txt_ProductName
         '
-        Me.txt_ProductName.Location = New System.Drawing.Point(130, 69)
+        Me.txt_ProductName.Location = New System.Drawing.Point(129, 40)
         Me.txt_ProductName.Name = "txt_ProductName"
         Me.txt_ProductName.Size = New System.Drawing.Size(233, 20)
         Me.txt_ProductName.TabIndex = 1
         '
         'cbo_SupplierID
         '
+        Me.cbo_SupplierID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_SupplierID.FormattingEnabled = True
-        Me.cbo_SupplierID.Location = New System.Drawing.Point(130, 95)
+        Me.cbo_SupplierID.Location = New System.Drawing.Point(129, 68)
         Me.cbo_SupplierID.Name = "cbo_SupplierID"
         Me.cbo_SupplierID.Size = New System.Drawing.Size(193, 21)
         Me.cbo_SupplierID.TabIndex = 2
         '
-        'cbo_ProductID
+        'cbo_CategoryID
         '
-        Me.cbo_ProductID.FormattingEnabled = True
-        Me.cbo_ProductID.Location = New System.Drawing.Point(130, 123)
-        Me.cbo_ProductID.Name = "cbo_ProductID"
-        Me.cbo_ProductID.Size = New System.Drawing.Size(144, 21)
-        Me.cbo_ProductID.TabIndex = 3
+        Me.cbo_CategoryID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo_CategoryID.FormattingEnabled = True
+        Me.cbo_CategoryID.Location = New System.Drawing.Point(129, 96)
+        Me.cbo_CategoryID.Name = "cbo_CategoryID"
+        Me.cbo_CategoryID.Size = New System.Drawing.Size(144, 21)
+        Me.cbo_CategoryID.TabIndex = 3
         '
         'txt_QuantityxUnit
         '
-        Me.txt_QuantityxUnit.Location = New System.Drawing.Point(130, 151)
+        Me.txt_QuantityxUnit.Location = New System.Drawing.Point(129, 123)
         Me.txt_QuantityxUnit.Name = "txt_QuantityxUnit"
         Me.txt_QuantityxUnit.Size = New System.Drawing.Size(131, 20)
         Me.txt_QuantityxUnit.TabIndex = 4
         '
         'txt_UnitPrice
         '
-        Me.txt_UnitPrice.Location = New System.Drawing.Point(130, 178)
+        Me.txt_UnitPrice.Location = New System.Drawing.Point(129, 150)
         Me.txt_UnitPrice.Name = "txt_UnitPrice"
         Me.txt_UnitPrice.Size = New System.Drawing.Size(131, 20)
         Me.txt_UnitPrice.TabIndex = 5
         '
         'txt_UnitsInStock
         '
-        Me.txt_UnitsInStock.Location = New System.Drawing.Point(130, 205)
+        Me.txt_UnitsInStock.Location = New System.Drawing.Point(129, 173)
         Me.txt_UnitsInStock.Name = "txt_UnitsInStock"
         Me.txt_UnitsInStock.Size = New System.Drawing.Size(100, 20)
         Me.txt_UnitsInStock.TabIndex = 6
         '
         'txt_UnitsOnOrder
         '
-        Me.txt_UnitsOnOrder.Location = New System.Drawing.Point(130, 232)
+        Me.txt_UnitsOnOrder.Location = New System.Drawing.Point(129, 200)
         Me.txt_UnitsOnOrder.Name = "txt_UnitsOnOrder"
         Me.txt_UnitsOnOrder.Size = New System.Drawing.Size(100, 20)
         Me.txt_UnitsOnOrder.TabIndex = 7
         '
         'txt_ReorderLevel
         '
-        Me.txt_ReorderLevel.Location = New System.Drawing.Point(130, 259)
+        Me.txt_ReorderLevel.Location = New System.Drawing.Point(129, 224)
         Me.txt_ReorderLevel.Name = "txt_ReorderLevel"
         Me.txt_ReorderLevel.Size = New System.Drawing.Size(100, 20)
         Me.txt_ReorderLevel.TabIndex = 8
@@ -116,15 +118,17 @@ Partial Class frmRegistrarProduct
         'check_Discontinued
         '
         Me.check_Discontinued.AutoSize = True
-        Me.check_Discontinued.Location = New System.Drawing.Point(131, 293)
+        Me.check_Discontinued.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.check_Discontinued.Location = New System.Drawing.Point(55, 259)
         Me.check_Discontinued.Name = "check_Discontinued"
-        Me.check_Discontinued.Size = New System.Drawing.Size(15, 14)
+        Me.check_Discontinued.Size = New System.Drawing.Size(88, 17)
         Me.check_Discontinued.TabIndex = 9
+        Me.check_Discontinued.Text = "Discontinued"
         Me.check_Discontinued.UseVisualStyleBackColor = True
         '
         'cb_Nuevo
         '
-        Me.cb_Nuevo.Location = New System.Drawing.Point(56, 331)
+        Me.cb_Nuevo.Location = New System.Drawing.Point(55, 303)
         Me.cb_Nuevo.Name = "cb_Nuevo"
         Me.cb_Nuevo.Size = New System.Drawing.Size(75, 23)
         Me.cb_Nuevo.TabIndex = 10
@@ -133,7 +137,7 @@ Partial Class frmRegistrarProduct
         '
         'cb_Guardar
         '
-        Me.cb_Guardar.Location = New System.Drawing.Point(155, 331)
+        Me.cb_Guardar.Location = New System.Drawing.Point(154, 303)
         Me.cb_Guardar.Name = "cb_Guardar"
         Me.cb_Guardar.Size = New System.Drawing.Size(75, 23)
         Me.cb_Guardar.TabIndex = 11
@@ -142,7 +146,7 @@ Partial Class frmRegistrarProduct
         '
         'cb_Buscar
         '
-        Me.cb_Buscar.Location = New System.Drawing.Point(248, 331)
+        Me.cb_Buscar.Location = New System.Drawing.Point(247, 303)
         Me.cb_Buscar.Name = "cb_Buscar"
         Me.cb_Buscar.Size = New System.Drawing.Size(75, 23)
         Me.cb_Buscar.TabIndex = 12
@@ -151,7 +155,7 @@ Partial Class frmRegistrarProduct
         '
         'cb_Eliminar
         '
-        Me.cb_Eliminar.Location = New System.Drawing.Point(343, 331)
+        Me.cb_Eliminar.Location = New System.Drawing.Point(342, 303)
         Me.cb_Eliminar.Name = "cb_Eliminar"
         Me.cb_Eliminar.Size = New System.Drawing.Size(75, 23)
         Me.cb_Eliminar.TabIndex = 13
@@ -161,7 +165,7 @@ Partial Class frmRegistrarProduct
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(37, 49)
+        Me.Label1.Location = New System.Drawing.Point(40, 18)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(67, 13)
         Me.Label1.TabIndex = 14
@@ -170,7 +174,7 @@ Partial Class frmRegistrarProduct
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(40, 75)
+        Me.Label2.Location = New System.Drawing.Point(40, 44)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(78, 13)
         Me.Label2.TabIndex = 15
@@ -179,7 +183,7 @@ Partial Class frmRegistrarProduct
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(40, 103)
+        Me.Label3.Location = New System.Drawing.Point(40, 72)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(48, 13)
         Me.Label3.TabIndex = 16
@@ -188,7 +192,7 @@ Partial Class frmRegistrarProduct
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(40, 131)
+        Me.Label4.Location = New System.Drawing.Point(40, 100)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(55, 13)
         Me.Label4.TabIndex = 17
@@ -197,7 +201,7 @@ Partial Class frmRegistrarProduct
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(46, 158)
+        Me.Label5.Location = New System.Drawing.Point(40, 127)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(79, 13)
         Me.Label5.TabIndex = 18
@@ -206,16 +210,16 @@ Partial Class frmRegistrarProduct
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(46, 185)
+        Me.Label6.Location = New System.Drawing.Point(40, 154)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(59, 13)
+        Me.Label6.Size = New System.Drawing.Size(56, 13)
         Me.Label6.TabIndex = 19
-        Me.Label6.Text = " Unit Price:"
+        Me.Label6.Text = "Unit Price:"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(46, 208)
+        Me.Label7.Location = New System.Drawing.Point(40, 177)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(76, 13)
         Me.Label7.TabIndex = 20
@@ -224,7 +228,7 @@ Partial Class frmRegistrarProduct
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(46, 235)
+        Me.Label8.Location = New System.Drawing.Point(40, 204)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(80, 13)
         Me.Label8.TabIndex = 21
@@ -233,27 +237,17 @@ Partial Class frmRegistrarProduct
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(53, 259)
+        Me.Label9.Location = New System.Drawing.Point(40, 228)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(77, 13)
         Me.Label9.TabIndex = 22
         Me.Label9.Text = "Reorder Level:"
         '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(53, 294)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(72, 13)
-        Me.Label10.TabIndex = 23
-        Me.Label10.Text = "Discontinued:"
-        '
         'frmRegistrarProduct
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(457, 510)
-        Me.Controls.Add(Me.Label10)
+        Me.ClientSize = New System.Drawing.Size(457, 352)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -273,12 +267,13 @@ Partial Class frmRegistrarProduct
         Me.Controls.Add(Me.txt_UnitsInStock)
         Me.Controls.Add(Me.txt_UnitPrice)
         Me.Controls.Add(Me.txt_QuantityxUnit)
-        Me.Controls.Add(Me.cbo_ProductID)
+        Me.Controls.Add(Me.cbo_CategoryID)
         Me.Controls.Add(Me.cbo_SupplierID)
         Me.Controls.Add(Me.txt_ProductName)
         Me.Controls.Add(Me.txt_ProductID)
         Me.Name = "frmRegistrarProduct"
-        Me.Text = "frmRegistrarProduct"
+        Me.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Text = "Registrar Producto"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -287,7 +282,7 @@ Partial Class frmRegistrarProduct
     Friend WithEvents txt_ProductID As TextBox
     Friend WithEvents txt_ProductName As TextBox
     Friend WithEvents cbo_SupplierID As ComboBox
-    Friend WithEvents cbo_ProductID As ComboBox
+    Friend WithEvents cbo_CategoryID As ComboBox
     Friend WithEvents txt_QuantityxUnit As TextBox
     Friend WithEvents txt_UnitPrice As TextBox
     Friend WithEvents txt_UnitsInStock As TextBox
@@ -307,5 +302,4 @@ Partial Class frmRegistrarProduct
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
 End Class
