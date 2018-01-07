@@ -83,6 +83,7 @@
     <Compile Include="nProduct.vb" />
     <Compile Include="nShipper.vb" />
     <Compile Include="nSupplier.vb" />
+    <Compile Include="nVentas.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

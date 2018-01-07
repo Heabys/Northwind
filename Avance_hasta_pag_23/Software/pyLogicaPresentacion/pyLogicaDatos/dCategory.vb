@@ -1,7 +1,7 @@
 ﻿Imports System
 Imports System.Data.SqlTypes
 Imports System.Data.SqlClient
-Imports ClassLibrary1.eCategory
+Imports ClassLibrary1
 
 Public Class dCategory
     Public Sub Eliminar(ByRef x As eCategory)

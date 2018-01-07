@@ -1,6 +1,6 @@
 ﻿Imports System
 Imports pyLogicaDatos
-Imports ClassLibrary1.eCategory
+Imports ClassLibrary1
 
 Public Class nCategory
     Public Sub Guardar(ByRef x As eCategory)

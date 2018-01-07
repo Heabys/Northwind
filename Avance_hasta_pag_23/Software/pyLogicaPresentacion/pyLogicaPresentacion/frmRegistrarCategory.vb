@@ -1,4 +1,4 @@
-﻿Imports ClassLibrary1.eCategory
+﻿Imports ClassLibrary1
 Imports pyLogicaNegocio
 Imports System.IO
 Public Class frmRegistrarCategory

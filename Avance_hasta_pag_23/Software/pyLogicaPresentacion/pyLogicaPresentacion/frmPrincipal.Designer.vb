@@ -27,12 +27,15 @@ Partial Class frmPrincipal
         Me.RegistrarShipperToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrarCategoriaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrarProveedorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportarEmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportarVentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip2
         '
-        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchivoToolStripMenuItem})
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchivoToolStripMenuItem, Me.ReportesToolStripMenuItem})
         Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip2.Name = "MenuStrip2"
         Me.MenuStrip2.Size = New System.Drawing.Size(284, 24)
@@ -64,6 +67,25 @@ Partial Class frmPrincipal
         Me.RegistrarProveedorToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
         Me.RegistrarProveedorToolStripMenuItem.Text = "Registrar Proveedor"
         '
+        'ReportesToolStripMenuItem
+        '
+        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportarEmpleadosToolStripMenuItem, Me.ReportarVentasToolStripMenuItem})
+        Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
+        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
+        Me.ReportesToolStripMenuItem.Text = "Reportes"
+        '
+        'ReportarEmpleadosToolStripMenuItem
+        '
+        Me.ReportarEmpleadosToolStripMenuItem.Name = "ReportarEmpleadosToolStripMenuItem"
+        Me.ReportarEmpleadosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ReportarEmpleadosToolStripMenuItem.Text = "Reportar Empleados"
+        '
+        'ReportarVentasToolStripMenuItem
+        '
+        Me.ReportarVentasToolStripMenuItem.Name = "ReportarVentasToolStripMenuItem"
+        Me.ReportarVentasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ReportarVentasToolStripMenuItem.Text = "Reportar Ventas"
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -85,4 +107,7 @@ Partial Class frmPrincipal
     Friend WithEvents RegistrarShipperToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RegistrarCategoriaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RegistrarProveedorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReportesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReportarEmpleadosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReportarVentasToolStripMenuItem As ToolStripMenuItem
 End Class
