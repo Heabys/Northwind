@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "tarea-pyLogicaEntidad",
+      "appliesTo": "Avance_hasta_pag_23/Software/pyLogicaPresentacion/pyLogicaEntidad/",
+      "type": "launch"
+    }
+  ]
+}
